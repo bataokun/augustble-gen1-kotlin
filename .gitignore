@@ -1,0 +1,28 @@
+# Gradle / build outputs (any depth)
+.gradle/
+.gradle-home/
+build/
+*/build/
+.kotlin/
+
+# Android toolchain artifacts
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Local machine configuration (contains sdk.dir)
+local.properties
+
+# IDE
+.idea/
+*.iml
+
+# Build & signing outputs
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# OS metadata
+.DS_Store
+Thumbs.db

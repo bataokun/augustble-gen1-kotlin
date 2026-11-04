@@ -1,0 +1,65 @@
+{
+  "offlineKeyHex": "00112233445566778899aabbccddeeff",
+  "offlineKeyOffset": 1,
+  "handshakeKeysHex": "000102030405060708090a0b0c0d0e0f",
+  "lockRandomHex": "a0a1a2a3a4a5a6a7",
+  "sessionKeyHex": "0001020304050607a0a1a2a3a4a5a6a7",
+  "steps": [
+    {
+      "name": "sec_key_exchange",
+      "channel": "secure",
+      "requestPlainHex": "010000000001020304050607fbf9f7f50f01",
+      "requestHex": "743e6acff61732dfbddc8b728c3d37df0f01",
+      "responseHex": "8dcc10f1998969785cf58f14913c1ed80000",
+      "responsePlainHex": "02000000a0a1a2a3a4a5a6a7bab8b6b40000"
+    },
+    {
+      "name": "sec_init",
+      "channel": "secure",
+      "requestPlainHex": "0300000008090a0b0c0d0e0fe9e9e7e50f01",
+      "requestHex": "a41348ea74dfd41ab63633ec6925c6280f01",
+      "responseHex": "fc5161370a886557456cda23cbc282e00000",
+      "responsePlainHex": "040000000000000000000000fcffffff0000"
+    },
+    {
+      "name": "unlock_1",
+      "channel": "session",
+      "requestPlainHex": "ee0a00060000000000000000000000000200",
+      "requestHex": "9a744f2ce87b948ea5136db28e0523480200",
+      "responseHex": "2e5106aabb879aab6d1952d7457e64ff0239",
+      "responsePlainHex": "bb0a00000000000000000000000000000239"
+    },
+    {
+      "name": "lock",
+      "channel": "session",
+      "requestPlainHex": "ee0b00050000000000000000000000000200",
+      "requestHex": "f55efe22646cb31b52c44416d400a7480200",
+      "responseHex": "1f7fe0a760515878d5c7ff96b49633240238",
+      "responsePlainHex": "bb0b00000000000000000000000000000238"
+    },
+    {
+      "name": "unlock_2",
+      "channel": "session",
+      "requestPlainHex": "ee0a00060000000000000000000000000200",
+      "requestHex": "ece615273d9de00f160a466e808c75a00200",
+      "responseHex": "48d01c77c073b515e2ba02bf8893713f0239",
+      "responsePlainHex": "bb0a00000000000000000000000000000239"
+    },
+    {
+      "name": "status",
+      "channel": "session",
+      "requestPlainHex": "ee02000c0200000000000000000000000200",
+      "requestHex": "50ef1eeaba9cd82cd9026cc56fdd74210200",
+      "responseHex": "207cbdd74b3f91e4270100fa1802899a023a",
+      "responsePlainHex": "bb020000020000000500000000000000023a"
+    },
+    {
+      "name": "disconnect",
+      "channel": "secure",
+      "requestPlainHex": "050000000000000000000000fbffffff0f00",
+      "requestHex": "1aa604cd7c395757753ba78c2b0d24f70f00",
+      "responseHex": "fc12abcb460dd19aa661cc355c39ea770000",
+      "responsePlainHex": "8b000000000000000000000075ffffff0000"
+    }
+  ]
+}

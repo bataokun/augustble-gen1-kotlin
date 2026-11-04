@@ -1,0 +1,31 @@
+augustble-gen1-kotlin is an unofficial Kotlin/Android library for the
+August Smart Lock (1st generation).
+
+The BLE protocol implementation in `core/` (frame layout, checksums, the
+AES-128-ECB secure channel, the stateful AES-128-CBC session channel, and the
+handshake sequence) was originally derived from augustctl:
+
+  augustctl — CLI and Library to control the August Smart Lock
+  https://github.com/robson83/augustctl (original by Dan Walters)
+  Licensed under the MIT License, (c) 2014 Dan Walters.
+  (Original JavaScript sources: lib/lock.js, lib/lock_session.js,
+  lib/secure_lock_session.js, lib/scan.js.)
+
+Portions of the protocol behaviour were adapted from yalexs-ble:
+
+  yalexs-ble — Bluetooth control of Yale and August locks
+  https://github.com/Yale-Libs/yalexs-ble
+  Licensed under the Apache License, Version 2.0 (see APACHE-2.0.txt).
+
+Adapted from yalexs-ble (itself a descendant of augustctl): the staged
+operation wait for lock/unlock (acknowledgment, then the operation
+response whose result byte reports motor faults), the operation-result
+code table, the door/battery status polls and parsing (including the AA
+battery discharge curve), the unlatch and secure-mode operation bytes,
+and the 18-byte frame admission gate that protects the CBC chain.
+Modifications: ported from Python (bleak) to Kotlin coroutines and
+integrated with this library's frame routing (`AugustLock.events`).
+
+This project is not affiliated with or endorsed by August Home / Yale.
+Use at your own risk: the offline key is effectively a physical key to your
+door — anyone holding it can open the lock.

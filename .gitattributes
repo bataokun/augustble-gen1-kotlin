@@ -1,0 +1,12 @@
+# Normalize text files to LF in the repository
+* text=auto
+
+# Windows-only files keep CRLF in the working tree
+*.bat text eol=crlf
+
+# Shell scripts must keep LF (builds on Unix break with CRLF)
+gradlew text eol=lf
+*.sh text eol=lf
+
+# Binaries
+*.jar binary

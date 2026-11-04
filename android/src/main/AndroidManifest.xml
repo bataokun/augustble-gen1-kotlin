@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+      BLE permissions are declared here so they merge into consumer apps.
+      On Android 12+ (API 31+) BLUETOOTH_SCAN/CONNECT are runtime permissions;
+      on older versions scanning needs a location permission instead.
+      Apps that do not derive location from Bluetooth scans should add
+      android:usesPermissionFlags="neverForLocation" to BLUETOOTH_SCAN in
+      their own manifest (the sample app does).
+    -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
+</manifest>
